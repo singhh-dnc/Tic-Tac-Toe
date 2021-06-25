@@ -18,6 +18,7 @@ function Square(props) {
     render() {
       return (
         <div>
+          <div className="status">{status}</div>
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -124,7 +125,7 @@ function Square(props) {
     <Game />,
     document.getElementById('root')
   );
-  
+    
   function calculateWinner(squares) {
     const lines = [
       [0, 1, 2],
